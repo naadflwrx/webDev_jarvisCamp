@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kondisional Game</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 8rem;
+            text-align: center;
+        }
+
+        .title {
+            color: #213970;
+        }
+
+        form input {
+            border: 1px solid #213970;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            width: 30%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .role {
+            border: 1px solid #213970;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            width: 31%;
+            text-align: center;
+            display: block;
+            margin: auto;
+        }
+
+        .submit {
+            border-radius: 1rem;
+            padding: 0.5rem;
+            width: 31%;
+            margin-top: 1.3rem;
+            text-align: center;
+            background-color: #213970;
+            color: #ffffff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="title">Werewolf Game</h1>
+    <h3>Masukkan nama dan pilih peranmu!</h3>
+
+    <form action="#" id="formConditional">
+        <input type="text" id="name" placeholder="Isi nama di sini"><br>
+
+        <label type="text"><br>
+            <select class="role" name="role" id="role">
+                <option value="" disabled selected>Pilih peranmu!</option>
+                <option value="Penyihir">Penyihir</option>
+                <option value="Werewolf">Werewolf</option>
+                <option value="Rakjel">Rakya Jelata</option>
+            </select>
+
+            <input class="submit" type="submit" value="Mulai Permainan">
+    </form>
+
+
+    <h3>Jawaban dari console game: </h3>
+    <div id="jawaban">
+
+    </div>
+</body>
+
+<script>
+    var form = document.getElementById("formConditional")
+    var jawaban = document.getElementById("jawaban")
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault()
+
+        var name = document.getElementById("name").value
+        var role = document.getElementById("role").value
+
+        var jawabanKonsol
+
+        if (name === "") {
+            jawabanKonsol = "Nama harus di isi!";
+        } else if (name !== "" && role === "") {
+            jawabanKonsol = "Halo " + name + ", pilih peranmu untuk memulai game!";
+        } else if (name !== "" && role === "Penyihir") {
+            jawabanKonsol = "Selamat datang di Dunia Werewolf, " + name + "!<br>" +
+                "Halo Penyihir " + name + ", kamu dapat melihat siapa yang menjadi Werewolf!";
+        } else if (name !== "" && role === "Werewolf") {
+            jawabanKonsol = "Selamat datang di Dunia Werewolf, " + name + "!<br>" +
+                "Halo Werewolf " + name + ", kamu dapat memilih siapa yang akan kamu makan malam ini!";
+        } else if (name !== "" && role === "Rakjel") {
+            jawabanKonsol = "Selamat datang di Dunia Werewolf, " + name + "!<br>" +
+                "Halo Rakjel " + name + ", Kamu menjadi rakyat jelata.";
+        }
+
+        jawaban.innerHTML = jawabanKonsol
+    })
+</script>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+
+    <style>
+        #container {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            margin: 3rem;
+        }
+
+        .title {
+            color: #213970;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #213970;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        #content {
+            margin: auto;
+            width: 40%;
+            border: 1px solid #213970;
+            border-radius: 1rem;
+        }
+
+        #form {
+            margin-left: 5rem;
+        }
+
+        .image {
+            display: flex;
+            height: 30rem;
+            margin-left: 5rem;
+            margin-top: 1rem;
+        }
+
+        .name input {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #000000;
+            border-radius: 1rem;
+            width: 60%;
+        }
+
+        .gender {
+            margin-bottom: 1rem;
+            width: 80%;
+            align-items: center;
+        }
+
+        .nationaly select {
+            margin-top: 0.4rem;
+            padding: 0.5rem;
+            border: 1px solid #000000;
+            border-radius: 1rem;
+            width: 65%;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .languange input {
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+
+        .bio textarea {
+            padding: 0.5rem;
+            border: 1px solid #000000;
+            border-radius: 1rem;
+            width: 80%;
+            margin-bottom: 1rem;
+            display: flex;
+        }
+
+        .button {
+            border: 1px solid #000000;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            width: 84%;
+            margin-bottom: 1rem;
+            text-align: center;
+            background-color: #213970;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div id="navbar">
+            <h1 class="jarvis">JarvisCamp</h1>
+            <ul class="nav_link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="conctact.html">Contact Us</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="container">
+        <div class="title">
+            <h1>Buat Account Baru!</h1>
+            <div class="image">
+                <img src="asset/form.jpg" alt="form">
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="subtitle">
+                <h2>Sign Up Form</h2>
+            </div>
+
+            <div id="form">
+                <form action="welcome.html">
+                    <div class="name">
+                        <label for="nama"><b>First Name : </b></label>
+                        <input type="text" required>
+                        <br>
+                        <label for="nama"><b>Last Name : </b></label>
+                        <input type="text" required>
+                    </div>
+
+                    <div class="gender">
+                        <label for="nama"><b>Gender :</b></label>
+
+                            <input name="gender" id="male" type="radio">
+                            <label for="male">Male</label>
+
+                            <input name="gender" id="female" type="radio">
+                            <label for="female">Female</label>
+
+                            <input name="gender" id="other" type="radio">
+                            <label for="other">Other</label>
+                    </div>
+
+                    <div class="nationaly">
+                        <label for="nationaly"><b>Nationaly :</b></label>
+                        <select name="nationaly" id="nationaly" required>
+                            <option value="" selected disabled >Select Nationality</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Korea">Korea</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="China">China</option>
+                            <option value="Inggris">Belanda</option>
+                        </select>
+                    </div>
+                    
+                    <div class="languange">
+                        <label for="languange"><b>Languange Spoken : </b></label>
+                        <br>
+                        <input name="languange" id="bike" type="checkbox">
+                        <label for="bike">I have a bike</label>
+
+                        <input name="languange" id="car" type="checkbox">
+                        <label for="car">I have a car</label>
+
+                        <input name="languange" id="boat" type="checkbox">
+                        <label for="boat">I have a boat</label>
+                    </div>
+                
+                    <div class="bio">
+                        <label for="bio"><b>Bio : </b></label>
+                        <textarea name="bio" id="bio"></textarea>
+                    </div>
+
+                    <button class="button">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>Created by ST. NURMUHSINA</footer>
+</body>
+
+</html>
